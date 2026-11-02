@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Постава людини | Біологічний проєкт</title>
+<style>
+:root{--navy:#142d43;--blue:#28536b;--teal:#3c8c89;--pale:#eaf2f3;--paper:#f7f9fa;--ink:#203342;--muted:#647681;--line:#dbe4e8;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+.topbar{background:var(--navy);color:white;padding:14px 6vw;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:13px;letter-spacing:2px;font-weight:700;text-transform:uppercase}
+.topbar span{font-size:13px;color:#c9d9e1}
+nav{background:#fff;border-bottom:1px solid var(--line);padding:12px 5vw;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+nav a{font-size:13px;text-decoration:none;color:var(--blue);padding:8px 13px;border-radius:4px;font-weight:700}
+nav a:hover{background:var(--pale)}
+.hero{background:linear-gradient(115deg,#142d43 0%,#234b61 65%,#347d80 100%);color:white;padding:68px 7vw 74px}
+.hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:45px}
+.kicker{color:#9bd0ce;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+h1{font-size:clamp(34px,4.8vw,58px);line-height:1.13;margin:15px 0 20px;max-width:720px}
+.hero p{font-size:18px;color:#e0ebef;max-width:620px}
+.meta{font-size:14px!important;color:#b9cbd4!important;margin-top:28px}
+.hero-figure{background:#ffffff0e;border:1px solid #ffffff30;border-radius:8px;padding:16px}
+.hero-figure svg{width:100%;height:auto;display:block}
+.btn{display:inline-block;background:#76b8b2;color:#102d40;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:4px;margin-top:12px}
+main{max-width:1180px;margin:auto;padding:0 30px}
+section{padding:62px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:28px}
+.num{font-size:13px;color:var(--teal);font-weight:700;letter-spacing:1px;padding-top:8px}
+h2{font-size:clamp(25px,3vw,35px);line-height:1.2;color:var(--navy);margin:0 0 10px}
+.lead{margin:0;color:var(--muted);font-size:16px;max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:white;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.card .body{padding:20px 22px}
+.card h3{color:var(--blue);margin:0 0 8px;font-size:20px}
+.card p{margin:0;color:#536570}
+.art{display:block;width:100%;height:auto;background:#edf3f4}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.visual{background:white;border:1px solid var(--line);border-radius:7px;padding:12px}
+.visual svg{width:100%;height:auto;display:block}
+.text-block{font-size:16px;color:#536570}
+.text-block strong{color:var(--navy)}
+.fact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fact{background:#fff;border:1px solid var(--line);padding:21px;border-top:3px solid var(--teal)}
+.fact strong{display:block;color:var(--navy);font-size:18px;margin-bottom:7px}
+.fact p{margin:0;color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.step{background:white;border:1px solid var(--line);padding:20px;border-radius:6px}
+.step .n{font-size:12px;color:var(--teal);font-weight:bold;letter-spacing:1px}
+.step h3{margin:7px 0;color:var(--navy);font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.callout{background:#e8f1f2;border-left:4px solid var(--teal);padding:18px 22px;margin-top:22px;color:#34505f}
+.conclusion{background:var(--navy);color:white;padding:38px;border-radius:7px}
+.conclusion h2{color:white}
+.conclusion p{color:#d8e5e9;font-size:17px;max-width:900px;margin-bottom:0}
+footer{background:#102638;color:#d8e5e9;text-align:center;padding:30px 15px;font-size:13px;letter-spacing:.4px}
+.caption{font-size:12px;color:#758792;text-align:center;padding:7px 0 0}
+@media(max-width:760px){.hero-inner,.split,.grid{grid-template-columns:1fr}.fact-row,.steps{grid-template-columns:1fr}.hero{padding:45px 6vw}.hero-figure{max-width:420px;margin:auto}main{padding:0 18px}.topbar{padding:13px 18px}nav{position:static}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="brand">Біологія · Опорно-руховий апарат</div><span>Навчальний проєкт · 8 клас</span></div>
+<nav>
+<a href="#intro">Поняття постави</a><a href="#structure">Хребет і м’язи</a><a href="#nature">Формування</a><a href="#disorders">Порушення</a><a href="#prevention">Профілактика</a><a href="#conclusion">Висновок</a>
+</nav>
+<header class="hero">
+<div class="hero-inner">
+<div>
+<div class="kicker">Дослідження з біології</div>
+<h1>Постава людини:<br>вроджена чи набута?</h1>
+<p>Особливості формування постави, її зв’язок з опорно-руховим апаратом та способи збереження здоров’я хребта.</p>
+<a class="btn" href="#intro">Переглянути проєкт ↓</a>
+<p class="meta">Виконала: учениця 8 класу Пиль Софія<br>Нижньогаївська гімназія</p>
+</div>
+<div class="hero-figure">
+<svg viewBox="0 0 470 390" role="img" aria-label="Анатомічна схема хребта людини">
+<rect width="470" height="390" rx="5" fill="#f1f5f5"/>
+<path d="M213 30 C170 68 184 103 218 137 C250 170 245 204 210 238 C180 267 190 310 225 358" fill="none" stroke="#d5a77c" stroke-width="42" stroke-linecap="round"/>
+<path d="M213 30 C170 68 184 103 218 137 C250 170 245 204 210 238 C180 267 190 310 225 358" fill="none" stroke="#f8e8d3" stroke-width="29" stroke-linecap="round" stroke-dasharray="2 12"/>
+<g fill="#f5e2ca" stroke="#a8795e" stroke-width="2">
+<ellipse cx="211" cy="42" rx="17" ry="10"/><ellipse cx="197" cy="72" rx="18" ry="10"/><ellipse cx="198" cy="102" rx="19" ry="11"/><ellipse cx="219" cy="133" rx="20" ry="11"/><ellipse cx="234" cy="165" rx="21" ry="12"/><ellipse cx="230" cy="198" rx="21" ry="12"/><ellipse cx="211" cy="230" rx="21" ry="12"/><ellipse cx="196" cy="263" rx="21" ry="12"/><ellipse cx="199" cy="296" rx="22" ry="12"/><ellipse cx="216" cy="329" rx="23" ry="13"/>
+</g>
+<g stroke="#9bc6c2" stroke-width="2" fill="none"><path d="M236 70 L330 70 H390"/><path d="M245 165 L330 165 H390"/><path d="M220 295 L330 295 H390"/></g>
+<g fill="#fff" font-size="13" font-family="Arial"><text x="340" y="61">Шийний</text><text x="340" y="78">відділ</text><text x="340" y="156">Грудний</text><text x="340" y="173">відділ</text><text x="340" y="286">Поперековий</text><text x="340" y="303">відділ</text></g>
+<text x="28" y="365" fill="#45616d" font-size="13">Схематичне зображення хребта</text>
+</svg>
+</div>
+</div>
+</header>
+<main>
+<section id="intro">
+<div class="section-head"><div class="num">01</div><div><h2>Що таке постава?</h2><p class="lead">Постава — це звичне положення тіла людини у стані спокою та під час руху.</p></div></div>
+<div class="split">
+<div class="text-block">
+<p>Вона залежить від форми хребта, стану м’язів і роботи нервової системи. Правильна постава допомагає підтримувати рівновагу та рівномірно розподіляти навантаження на опорно-руховий апарат.</p>
+<p><strong>Опорно-руховий апарат</strong> складається зі скелета та скелетних м’язів. Вони разом забезпечують опору, рух і захист внутрішніх органів.</p>
+</div>
+<div class="visual">
+<svg viewBox="0 0 600 310" aria-label="Порівняння правильної та неправильної постави">
+<rect width="600" height="310" fill="#edf3f4"/>
+<line x1="300" y1="22" x2="300" y2="285" stroke="#d0dcdf" stroke-width="2"/>
+<text x="150" y="30" text-anchor="middle" fill="#a85b59" font-size="17" font-weight="bold">Порушена постава</text>
+<text x="450" y="30" text-anchor="middle" fill="#347e78" font-size="17" font-weight="bold">Рівна постава</text>
+<!-- slouched -->
+<circle cx="140" cy="78" r="23" fill="#d8a17f"/><path d="M130 102 Q185 112 177 165 L164 205" stroke="#54788a" stroke-width="25" fill="none" stroke-linecap="round"/>
+<path d="M168 145 L220 177 M165 205 L145 265 M165 205 L190 265" stroke="#d8a17f" stroke-width="16" fill="none" stroke-linecap="round"/>
+<path d="M140 103 Q190 128 175 180" stroke="#bd5e5b" stroke-width="4" stroke-dasharray="7 6" fill="none"/>
+<!-- upright -->
+<circle cx="450" cy="78" r="23" fill="#d8a17f"/><path d="M450 102 L450 200" stroke="#54788a" stroke-width="25" fill="none" stroke-linecap="round"/>
+<path d="M450 130 L405 177 M450 130 L495 177 M450 200 L425 265 M450 200 L475 265" stroke="#d8a17f" stroke-width="16" fill="none" stroke-linecap="round"/>
+<path d="M450 105 L450 200" stroke="#347e78" stroke-width="4" stroke-dasharray="7 6"/>
+<text x="150" y="292" text-anchor="middle" fill="#6b7880" font-size="13">Надмірне округлення спини</text>
+<text x="450" y="292" text-anchor="middle" fill="#6b7880" font-size="13">Природне положення тіла</text>
+</svg>
+<div class="caption">Схематичне порівняння положення тіла</div>
+</div>
+</div>
+</section>
+
+<section id="structure">
+<div class="section-head"><div class="num">02</div><div><h2>Роль хребта та м’язів</h2><p class="lead">Постава підтримується спільною роботою кісток, суглобів, зв’язок і м’язів.</p></div></div>
+<div class="grid">
+<div class="card">
+<svg class="art" viewBox="0 0 560 230" aria-label="Схема відділів хребта">
+<rect width="560" height="230" fill="#edf3f4"/>
+<path d="M190 25 Q160 60 192 90 Q220 120 192 150 Q170 178 205 210" fill="none" stroke="#c99b76" stroke-width="35" stroke-linecap="round"/>
+<path d="M190 25 Q160 60 192 90 Q220 120 192 150 Q170 178 205 210" fill="none" stroke="#f5e6d4" stroke-width="22" stroke-dasharray="2 10" stroke-linecap="round"/>
+<g stroke="#54788a" stroke-width="2"><path d="M210 48 H330"/><path d="M215 105 H330"/><path d="M202 166 H330"/></g>
+<g fill="#284b61" font-size="16"><text x="340" y="53">Шийний відділ</text><text x="340" y="110">Грудний відділ</text><text x="340" y="171">Поперековий відділ</text></g>
+<text x="25" y="215" fill="#657984" font-size="12">Відділи хребетного стовпа</text>
+</svg>
+<div class="body"><h3>Хребет</h3><p>Є опорою тулуба, захищає спинний мозок і має природні вигини, які допомагають пом’якшувати поштовхи.</p></div>
+</div>
+<div class="card">
+<svg class="art" viewBox="0 0 560 230" aria-label="Схематичне зображення м’язів спини">
+<rect width="560" height="230" fill="#edf3f4"/>
+<path d="M280 28 C235 28 215 55 220 92 L190 150 Q185 190 230 205 L280 180 L330 205 Q375 190 370 150 L340 92 C345 55 325 28 280 28Z" fill="#d9a28d" stroke="#a86f67" stroke-width="3"/>
+<path d="M280 40 L280 180 M225 78 Q250 90 260 140 M335 78 Q310 90 300 140" stroke="#9b5f5a" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M230 95 Q250 120 245 170 M330 95 Q310 120 315 170" stroke="#efc2ad" stroke-width="10" fill="none"/>
+<text x="280" y="220" text-anchor="middle" fill="#657984" font-size="12">М’язи тулуба (схематично)</text>
+</svg>
+<div class="body"><h3>М’язи</h3><p>М’язи спини, живота та плечового поясу допомагають утримувати тіло в певному положенні й виконувати рухи.</p></div>
+</div>
+</div>
+</section>
+
+<section id="nature">
+<div class="section-head"><div class="num">03</div><div><h2>Постава: вроджена чи набута?</h2><p class="lead">Формування постави залежить від спадкових особливостей і умов життя.</p></div></div>
+<div class="fact-row">
+<div class="fact"><strong>Вроджені чинники</strong><p>Спадкові особливості будови тіла та розвитку опорно-рухового апарату можуть впливати на поставу.</p></div>
+<div class="fact"><strong>Набуті чинники</strong><p>Положення тіла під час навчання, рухова активність, звички та розвиток м’язів.</p></div>
+<div class="fact"><strong>Головна думка</strong><p>Постава переважно формується протягом життя, тому корисні звички мають велике значення.</p></div>
+</div>
+</section>
+
+<section id="disorders">
+<div class="section-head"><div class="num">04</div><div><h2>Причини порушення постави</h2><p class="lead">На стан опорно-рухового апарату можуть негативно впливати повторювані неправильні звички.</p></div></div>
+<div class="grid">
+<div class="card"><svg class="art" viewBox="0 0 560 190"><rect width="560" height="190" fill="#edf3f4"/><path d="M80 145 H485" stroke="#9aaeb7" stroke-width="10"/><path d="M125 145 V185 M450 145 V185" stroke="#9aaeb7" stroke-width="8"/><circle cx="260" cy="48" r="21" fill="#d8a17f"/><path d="M252 72 Q305 75 295 130 L285 145" stroke="#54788a" stroke-width="23" fill="none" stroke-linecap="round"/><path d="M292 102 L340 130" stroke="#d8a17f" stroke-width="14" stroke-linecap="round"/><rect x="330" y="110" width="35" height="26" rx="3" fill="#6d9da6"/><path d="M255 140 L230 180 M285 140 L320 180" stroke="#d8a17f" stroke-width="13" stroke-linecap="round"/></svg><div class="body"><h3>Неправильне сидіння</h3><p>Сутулість і незручне положення тіла за партою.</p></div></div>
+<div class="card"><svg class="art" viewBox="0 0 560 190"><rect width="560" height="190" fill="#edf3f4"/><circle cx="270" cy="42" r="20" fill="#d8a17f"/><path d="M270 65 Q290 95 270 150" stroke="#54788a" stroke-width="24" fill="none" stroke-linecap="round"/><rect x="290" y="82" width="50" height="65" rx="6" fill="#527e91"/><path d="M270 90 L300 110 M270 145 L245 180 M270 145 L295 180" stroke="#d8a17f" stroke-width="14" stroke-linecap="round"/></svg><div class="body"><h3>Тривале користування телефоном</h3><p>Постійний нахил голови та відсутність перерв.</p></div></div>
+<div class="card"><svg class="art" viewBox="0 0 560 190"><rect width="560" height="190" fill="#edf3f4"/><circle cx="270" cy="40" r="20" fill="#d8a17f"/><path d="M270 65 L270 140 M270 85 L225 120 M270 85 L315 120 M270 140 L245 180 M270 140 L295 180" stroke="#54788a" stroke-width="17" fill="none" stroke-linecap="round"/><rect x="220" y="68" width="100" height="83" rx="18" fill="none" stroke="#3c8c89" stroke-width="7"/><path d="M220 75 Q190 110 220 145 M320 75 Q350 110 320 145" stroke="#3c8c89" stroke-width="5" fill="none"/></svg><div class="body"><h3>Неправильне носіння рюкзака</h3><p>Носіння важкого рюкзака на одному плечі.</p></div></div>
+<div class="card"><svg class="art" viewBox="0 0 560 190"><rect width="560" height="190" fill="#edf3f4"/><path d="M70 155 H490" stroke="#a7b8bf" stroke-width="8"/><circle cx="270" cy="48" r="21" fill="#d8a17f"/><path d="M270 72 L270 130 M270 92 L230 130 M270 92 L310 130 M270 130 L245 175 M270 130 L295 175" stroke="#54788a" stroke-width="16" fill="none" stroke-linecap="round"/><path d="M100 55 H180 M140 35 V75" stroke="#3c8c89" stroke-width="5" stroke-linecap="round"/></svg><div class="body"><h3>Недостатня рухова активність</h3><p>Тривале сидіння та слабкий розвиток м’язів тулуба.</p></div></div>
+</div>
+</section>
+
+<section id="prevention">
+<div class="section-head"><div class="num">05</div><div><h2>Як зберегти правильну поставу?</h2><p class="lead">Профілактика ґрунтується на щоденних діях і помірній фізичній активності.</p></div></div>
+<div class="steps">
+<div class="step"><div class="n">ПРАВИЛО 01</div><h3>Правильно сиди</h3><p>Спирайся спиною на спинку стільця, став стопи на підлогу.</p></div>
+<div class="step"><div class="n">ПРАВИЛО 02</div><h3>Роби перерви</h3><p>Під час тривалого навчання вставай, змінюй положення тіла, рухайся.</p></div>
+<div class="step"><div class="n">ПРАВИЛО 03</div><h3>Носи рюкзак на двох плечах</h3><p>Стеж, щоб рюкзак не був надмірно важким.</p></div>
+<div class="step"><div class="n">ПРАВИЛО 04</div><h3>Будь фізично активним</h3><p>Обирай прогулянки, плавання, рухливі ігри та інші приємні заняття.</p></div>
+<div class="step"><div class="n">ПРАВИЛО 05</div><h3>Зміцнюй м’язи</h3><p>Виконуй безпечні вправи для м’язів тулуба за потреби з порадою фахівця.</p></div>
+<div class="step"><div class="n">ПРАВИЛО 06</div><h3>Звертай увагу на зміни</h3><p>Якщо є біль або помітна асиметрія, звернися до лікаря.</p></div>
+</div>
+<div class="callout"><strong>Важливо:</strong> вправи не повинні спричиняти біль. Якщо постава викликає занепокоєння, її оцінку та рекомендації має надати медичний фахівець.</div>
+</section>
+
+<section id="conclusion">
+<div class="conclusion">
+<h2>Висновок</h2>
+<p>Постава людини є переважно набутою, хоча на неї впливають і вроджені особливості організму. Вона тісно пов’язана з роботою хребта та м’язів, які є частинами опорно-рухового апарату. Правильне положення тіла, регулярний рух і дбайливе ставлення до здоров’я допомагають зберігати нормальну поставу.</p>
+</div>
+</section>
+</main>
+<footer>ПРОЄКТ З БІОЛОГІЇ · 8 КЛАС · ПИЛЬ СОФІЯ<br>Нижньогаївська гімназія · 2026</footer>
+</body>
+</html>
